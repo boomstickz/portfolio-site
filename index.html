@@ -3,66 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{Firstname} Portfolio</title>
+    <title> Ali Sharaf bin Alam - Portfolio</title>
     <link rel="stylesheet" href="main.css"> <!-- Linked CSS file -->
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)"> <!--CSS viewport for a phone-->
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)"> <!--CSS viewport for a tablet-->
+    <link rel="stylesheet" href="laptop.css" media="screen and (min-width: 1025px) and (max-width: 1366px)"> <!--CSS viewport for a laptop-->
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- Header / Navigation -->
-    <header class="header">
-        <div class="logo">
+    <header class="header" role="banner">
+        <div class="logo" aria-label="Site logo">
             LOGO GOES HERE
         </div>
         <nav class="nav">
-            <ol class="clearfix">
+            <ul class="clearfix">
                 <li class="element"><a href="#about">About</a></li>
                 <li class="element"><a href="#projects">Projects</a></li>
                 <li class="element"><a href="#skills">Skills</a></li>
                 <li class="element"><a href="#contact">Contact</a></li>
-            </ol>
+            </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
     <!-- About Section -->
-    <section id="about">
-        <h1>Who I Am</h1>
-        <p id="first">This is the first paragraph</p>
-        <p class="second">This is the second paragraph</p>
-        <p class="second">This is the third paragraph</p>
+     <section id="about" aria-labelledby="about-heading">
+        <h1 id="about-heading">Who I Am</h1>
+
+        <p id="first">Hi! Nice to meet ya, I go by Ali. I am a IT student in my 2nd year at Ontario Tech University with a creative mind that excells in problem solving.</p>
+              <!-- will add my headshot here later -->
+      <!-- <img src="assets/img/headshot.jpg" alt="Portrait of Ali" class="headshot"> -->
+
+      <!-- place holder for my video here later  -->
+      <!-- <video controls poster="assets/img/video-poster.jpg" width="640">
+           <source src="assets/video/intro.mp4" type="video/mp4">
+           <source src="assets/video/intro.webm" type="video/webm">
+           Sorry, your browser doesn’t support embedded videos.
+         </video> -->
+
+
+
+        <p class="second">This is my first year web designing and so far I am having a blast. I love the creative freedom and customizability of web designing which opens up endless posibilities for my future.</p>
+        <p class="second">In the long run, I want to complete my bachelors in Networking and IT Security first, grow as a software developer and explore the world of opportunity in cybersecurity. This portfolio will highlight my journey.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-list clearfix">
-            <!-- Example Project -->
-            <div class="project-item">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project goes here.</p>
-            </div>
+     <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">My Projects</h2>
+      <div class="project-list clearfix">
+        
+        <article class="project-item">
+          <h3> Interval/Range Utilities (Java)</h3>
+          <p>Implemented range operations (overlap checks, exception handling). Focus on testing and edge cases.</p>
+        </article>
 
-            <!-- Example Project -->
-            <div class="project-item">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project goes here.</p>
-            </div>
+        <article class="project-item">
+          <h3>Packet Tracer: EIGRP & OSPF Lab</h3>
+          <p>Configured dynamic routing, gateway of last resort, verified neighbor relationships and route tables.</p>
+        </article>
 
-            <!-- Example Project -->
-            <div class="project-item">
-                <h3>Project Title 3</h3>
-                <p>Brief description of the project goes here.</p>
-            </div>
-        </div>
+        <article class="project-item">
+          <h3>Pokémon Battle Simulator (Python)</h3>
+          <p>Turn-based CLI game with types, accuracy/effects, and simple AI. Practiced functions and modules.</p>
+        </article>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="clearfix">
-            <li class="element skill">Skill 1</li>
-            <li class="element skill">Skill 2</li>
-            <li class="element skill">Skill 3</li>
-        </ul>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="clearfix">
+        <!-- TODO: Replace with your real skills -->
+        <li class="element skill">HTML5/CSS3 (responsive)</li>
+        <li class="element skill">Java (OOP, data structures)</li>
+        <li class="element skill">Cisco Packet Tracer (routing)</li>
+      </ul>
     </section>
 
     <!-- Contact Section -->
