@@ -1,0 +1,111 @@
+
+:root{
+  --brand-bg: lightblue;
+  --brand-text: white;
+}
+
+*{ box-sizing: border-box; }
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;   /* makes all text bold */
+  color: black;        /* sets all text color to black */
+}
+
+/* Accessibility: skip link */
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.skip-link:focus{
+  left: 16px;
+  top: 16px;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  z-index: 1000;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+  padding: 12px 16px;
+}
+
+.nav ul{
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a{
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+/* Footer */
+#customfooter {
+  text-align: center;
+  background-color: var(--brand-bg);
+  color: black;
+  padding: 16px;
+}
+
+/* Demo text colors (keep if you want) */
+#first { color: black; }
+.second { color: black; }
+
+/* Float-based layout helpers (as you had) */
+.element { float: left; margin-right: 20px; }
+.clearfix::after { content: ""; display: table; clear: both; }
+
+/* Skills bubbles */
+.skill {
+  width: 360px;
+  background-color: aqua;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Projects grid (float-based) */
+.project-item {
+  width: 360px;
+  background-color: orangered;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE NOTES
+   You can keep one stylesheet for now.
+   If your assignment later asks for 3 separate CSS files (mobile/tablet/laptop),
+   we will split these media queries into three files and link with media="".
+*/
+
+/* EXACT REQUIREMENT YOU NOTED:
+   Only from 650px - 800px, make background-color in body -> pink.
+*/
+@media (min-width: 650px) and (max-width: 800px) {
+  body { background-color: white; }   /* changed to pink to match your note */
+}
+
+/* Small phones: shrink project cards */
+@media (max-width: 400px) {
+  .project-item { width: 200px; }
+}
+
+/* Optional: slightly wider phones/tablets */
+@media (max-width: 600px) {
+  .project-item { width: 100%; margin-right: 0; }
+  .skill { width: 100%; }
+}
