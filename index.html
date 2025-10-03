@@ -87,15 +87,20 @@
       <h2 id="contact-heading">Contact Me</h2>
       <p>Email: <a href="mailto:ali.alam@ontariotechu.net">ali.alam@ontariotechu.net</a></p>
       <p>LinkedIn: <a href="#" rel="noopener">linkedin.com/in/alishrfbnalam
-
+<!-- convert this to a proper contact form with HTML5 validation -->
 </a></p>
-      <!-- convert this to a proper contact form with HTML5 validation -->
+      
     </section>
   </main>
     
     <!-- Footer -->
     <footer id="customfooter" role="contentinfo">
-        <p>Copyright &copy; <span id="2025"></span> Ali Sharaf bin Alam</p>
+        <p>Copyright &copy; <span id="year"></span> Ali Sharaf bin Alam</p>
   </footer>
+
+  <script>
+    // Auto update za year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
