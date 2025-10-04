@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- note to self: contact form with HTML5 validation (required, email, phone pattern) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Ali Sharaf bin Alam</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="laptop.css" media="screen and (min-width: 1025px)">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="brand clearfix">
+      <div class="brand-left">Ali Sharaf bin Alam</div>
+      <div class="brand-right">AA</div>
+    </div>
+    <hr class="brand-rule" />
+    <nav class="nav" aria-label="Primary">
+      <ul class="clearfix">
+        <li class="element"><a href="about.html">About</a></li>
+        <li class="element"><a href="projects.html">Projects</a></li>
+        <li class="element"><a href="skills.html">Skills</a></li>
+        <li class="element"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="title">Contact Me</h1>
+
+    <!-- note to self: this is a demo form; no backend submit -->
+    <form class="contact-form" action="#" method="get" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <!-- note to self: simple North American 10-digit formats like 123-456-7890 -->
+      <label for="phone">Cell No.</label>
+      <input id="phone" name="phone"
+             type="tel"
+             pattern="\\d{3}[-. ]?\\d{3}[-. ]?\\d{4}"
+             placeholder="123-456-7890" required />
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer id="customfooter" role="contentinfo">
+    <p>Copyright &copy; 2025 Ali Sharaf bin Alam</p>
+  </footer>
+</body>
+</html>
